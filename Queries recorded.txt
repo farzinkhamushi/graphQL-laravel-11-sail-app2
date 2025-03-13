@@ -1,0 +1,161 @@
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+query MyQuery {
+  user(email: "christa.altenwerth@example.com") {
+    created_at
+    email
+    email_verified_at
+    id
+    name
+    updated_at
+  }
+}
+*********************************************************************
+{
+  "data": {
+    "user": {
+      "created_at": "2025-03-13 19:42:49",
+      "email": "christa.altenwerth@example.com",
+      "email_verified_at": "2025-03-13 19:42:49",
+      "id": "1",
+      "name": "Francisco Breitenberg V",
+      "updated_at": "2025-03-13 19:42:49"
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+query MyQuery {
+  users(first: 10, name: "Pansy Lindgren", page: 1) {
+    data {
+      created_at
+      email
+      email_verified_at
+      id
+      name
+      updated_at
+    }
+    paginatorInfo {
+      count
+      currentPage
+      firstItem
+      hasMorePages
+      lastItem
+      lastPage
+      perPage
+      total
+    }
+  }
+}
+**************************************************************************************
+{
+  "data": {
+    "users": {
+      "data": [
+        {
+          "created_at": "2025-03-13 19:42:49",
+          "email": "cecile.cole@example.com",
+          "email_verified_at": "2025-03-13 19:42:49",
+          "id": "7",
+          "name": "Pansy Lindgren",
+          "updated_at": "2025-03-13 19:42:49"
+        }
+      ],
+      "paginatorInfo": {
+        "count": 1,
+        "currentPage": 1,
+        "firstItem": 1,
+        "hasMorePages": false,
+        "lastItem": 1,
+        "lastPage": 1,
+        "perPage": 10,
+        "total": 1
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+query MyQuery {
+  users(first: 5, page: 1) {
+    data {
+      created_at
+      email
+      email_verified_at
+      id
+      name
+      updated_at
+    }
+    paginatorInfo {
+      firstItem
+      lastPage
+      perPage
+      total
+      count
+      currentPage
+      hasMorePages
+      lastItem
+    }
+  }
+}
+********************************************************************************
+{
+  "data": {
+    "users": {
+      "data": [
+        {
+          "created_at": "2025-03-13 19:42:49",
+          "email": "christa.altenwerth@example.com",
+          "email_verified_at": "2025-03-13 19:42:49",
+          "id": "1",
+          "name": "Francisco Breitenberg V",
+          "updated_at": "2025-03-13 19:42:49"
+        },
+        {
+          "created_at": "2025-03-13 19:42:49",
+          "email": "gmraz@example.net",
+          "email_verified_at": "2025-03-13 19:42:49",
+          "id": "2",
+          "name": "Genesis Jones",
+          "updated_at": "2025-03-13 19:42:49"
+        },
+        {
+          "created_at": "2025-03-13 19:42:49",
+          "email": "gdickens@example.net",
+          "email_verified_at": "2025-03-13 19:42:49",
+          "id": "3",
+          "name": "Beth Kling I",
+          "updated_at": "2025-03-13 19:42:49"
+        },
+        {
+          "created_at": "2025-03-13 19:42:49",
+          "email": "uschroeder@example.org",
+          "email_verified_at": "2025-03-13 19:42:49",
+          "id": "4",
+          "name": "Prof. Mittie Dooley V",
+          "updated_at": "2025-03-13 19:42:49"
+        },
+        {
+          "created_at": "2025-03-13 19:42:49",
+          "email": "jmcglynn@example.com",
+          "email_verified_at": "2025-03-13 19:42:49",
+          "id": "5",
+          "name": "Michelle Nolan",
+          "updated_at": "2025-03-13 19:42:49"
+        }
+      ],
+      "paginatorInfo": {
+        "firstItem": 1,
+        "lastPage": 2,
+        "perPage": 5,
+        "total": 10,
+        "count": 5,
+        "currentPage": 1,
+        "hasMorePages": true,
+        "lastItem": 5
+      }
+    }
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
